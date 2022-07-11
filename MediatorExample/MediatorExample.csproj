@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediatorExample.CustomMediator\MediatorExample.CustomMediator.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Handlers\" />
+    <None Remove="Controllers\Auth\" />
+    <None Remove="Controllers\Product\" />
+    <None Remove="Handlers\Auth\" />
+    <None Remove="Handlers\Product\" />
+    <None Remove="Models\Auth\" />
+    <None Remove="Models\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Controllers\Auth\" />
+    <Folder Include="Controllers\Product\" />
+    <Folder Include="Handlers\Auth\" />
+    <Folder Include="Handlers\Product\" />
+    <Folder Include="Models\Auth\" />
+    <Folder Include="Models\Product\" />
+  </ItemGroup>
+</Project>
